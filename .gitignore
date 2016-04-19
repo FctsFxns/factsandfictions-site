@@ -13,8 +13,6 @@ _site
 *.sass-cache
 
 # Travis
-_glynn.yml
-
 
 # Numerous always-ignore extensions
 *.diff

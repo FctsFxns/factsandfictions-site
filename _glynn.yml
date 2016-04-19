@@ -1,0 +1,13 @@
+# Glynn setup
+ftp_host: 'factsandfictions.net.dedi302.your-server.de'
+ftp_dir: '/public_html/2016'
+
+# Configuration settings for Travis on Hetzner Dedicated Server
+ftp_passive: true
+ftp_port: 21                  # default 21
+ftp_secure: false             # default false
+
+# Not using credentials since they are set as environment variables
+# see ./bin/deploy
+# ftp_username: 'XXX' 
+# ftp_password: 'XXX' 
