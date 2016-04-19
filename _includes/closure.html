@@ -1,8 +1,20 @@
   </body>
+  {% stylesheet pure/pure-min.css %}
+  <!--[if lte IE 8]>
+      {% stylesheet pure/grids-responsive-old-ie-min.css %}
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+      {% stylesheet pure/grids-responsive-min.css %}
+  <!--<![endif]-->
+
+
+
   <!-- Les scripts from third parties  -->
   {% javascript vendor %}
   <!-- Les scripts for my app -->
   {% javascript application %}
+
+
 
   <!-- Only in development mode -->
   {% if site.env == 'development' %}

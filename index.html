@@ -1,9 +1,19 @@
 ---
-layout: page
-layout_class: page-home
+layout: default
+layout-class: page-home page-home-v1  
 ---
-<h1>{{ site.data.global.title }}</h1>
-<h2>{{ site.data.global.slogan | markdownify }}</h2>
-<p>            
-	{{ site.data.global.description | markdownify }}
-</p>
+<div class="splash-home pure-g ">
+    <div class="splash-home-intro pure-u-1 pure-u-md-1 pure-u-xl-1 l-box-lrg  is-center bg-ff bg-ff-white">
+        
+        <h1 class="slogan" >
+            {{ site.data.global.slogan }}
+        </h1>
+         <p class="lead" itemprop="description">
+            <span>{{ site.data.global.tagline }}</span><br/>
+            {{ site.data.global.description }}
+        </p>        
+    </div>
+    
+    {% include marketing-cta.html %} 
+</div>
+

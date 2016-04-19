@@ -1,7 +1,7 @@
 # Site settings
 title:            'facts & fictions'
 
-tagline:           > # …
+slogan:           > # …
   Diseñamos, construimos y desarrollamos tu estrategia digital
 
 description:      > # No dejar espacios
@@ -9,7 +9,7 @@ description:      > # No dejar espacios
   enfocados en el crecimiento de organizaciones 
   en la era digital.
 
-slogan:           > # …
+tagline:           > # …
   Analítica & emoción, creatividad & efectividad, 
   resultados & bienestar social.
 

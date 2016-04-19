@@ -1,14 +1,38 @@
 ---
 layout: default
 ---
-<article>
-	{% if page.title %}
-	  <header class="post-header">
-	    <h1 class="post-title">{{ page.title }}</h1>
-	  </header>
-  {% endif %}
 
-  {{ content }}
+<article class="page pure-g">
+
+    {% if page.featured_image or page.featured_video_id %}
+
+	    <div class="page-header-wrapper page-header-with-media pure-u-1">
+	    {% if page.featured_image %}
+			<img class="pure-img-responsive" src="{{ page.featured_image }}" alt="&nbsp;"> 
+		    <div class="page-header page-header-with-image l-box ">
+	    {% endif %}
+
+	    {% if page.featured_video_id %}
+		    <iframe src="https://www.youtube.com/embed/{{ page.featured_video_id }}" frameborder="0" allowfullscreen></iframe>
+		    <div class="page-header page-header-with-video l-box ">
+	    {% endif %}
+
+    {% else %}
+	    <div class="page-header-wrapper pure-u-1">
+	    	<div class="page-header l-box-lrg ">
+    {% endif %}
+	   	 		<h1 class="page-title">{{ page.title }}</h1>
+
+		        {% if page.lead_text %}
+				    <p class="lead">
+			            {{ page.lead_text }}
+				    </p>
+		        {% endif %}
+
+			</div>
+	</div>
+  <div class="page-content l-box-lrg pure-u-1 ">
+    {{ content }}
+  </div>
 
 </article>
-{% include call-to-action.html %}

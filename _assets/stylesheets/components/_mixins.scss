@@ -1,0 +1,361 @@
+// .wrapper {
+//   @extend %ff-text-color-white;
+// }
+
+%ff-text-color-white {
+    .pure-g [class *= "pure-u"],
+    h1, h2, h3, h4, h5, h6, 
+    p, ul, ul li, address, label, span {
+      transition: color 3s ease 0s, transform 0.3s ease 0s;
+      color: $ff-white;
+    }
+}
+
+%ff-text-color-black {
+    .pure-g [class *= "pure-u"],
+    h1, h2, h3, h4, h5, h6, 
+    p, ul, ul li, address, label, span {
+      transition: color 3s ease 0s, transform 0.3s ease 0s;
+      color: $ff-black;
+    }
+}
+
+%ff-text-color-dark {
+    .pure-g [class *= "pure-u"],
+    h1, h2, h3, h4, h5, h6, 
+    p, ul, ul li, address, label, span {
+      transition: color 3s ease 0s, transform 0.3s ease 0s;
+      color: $ff-dark;
+    }
+}
+
+%ff-text-color-primary {
+    .pure-g [class *= "pure-u"],
+    h1, h2, h3, h4, h5, h6, 
+    p, ul, ul li, address, label, span {
+      transition: color 3s ease 0s, transform 0.3s ease 0s;
+      color: $ff-primary;
+    }
+}
+
+%ff-text-color-secondary {
+    .pure-g [class *= "pure-u"],
+    h1, h2, h3, h4, h5, h6, 
+    p, ul, ul li, address, label, span {
+      transition: color 3s ease 0s, transform 0.3s ease 0s;
+      color: $ff-secondary;
+    }
+}
+
+// .faded-text {
+//   @include opacity(0.8);
+// }
+@mixin opacity($opacity) {
+  $opacity-ie: $opacity * 100;
+
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity-ie)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=$opacity-ie);
+
+  /* Netscape */
+  -moz-opacity: $opacity;
+
+  /* Safari 1.x */
+  -khtml-opacity: $opacity;
+
+  /* Good browsers */
+  opacity: $opacity; 
+}
+
+// Navigation mixin for opacity
+// .pure-menu {
+//    @include pure-navigation-opacity(0.9, $ff-white);
+// }
+
+@mixin pure-navigation-opacity($opacity, $bgcolor) {
+    display: block;
+    background-color: transparent;
+    &::after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        top: 0;
+        background: $bgcolor;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;  
+        @include opacity($opacity);
+
+    } 
+}
+
+
+// a.pure-button-light {
+//   @include pure-button('#00ff00', '#fff');
+// }
+@mixin pure-button-inverse($bgcolor, $color) {
+      background: $color;
+      border-color: $bgcolor;
+      color: $bgcolor;
+      span {
+        color: $bgcolor;
+      }
+      &:visited {
+        color: $color;
+      }
+      &:hover {
+        background: $bgcolor;
+        border-color: $color;
+        color: $color;
+        span {
+          @include transition(none);
+          color: $color !important;
+        }
+      }
+}
+// a.pure-button-light-inverse {
+//   @include pure-button-inverse('#00ff00', '#fff');
+// }
+@mixin pure-button($bgcolor, $color) {
+      background: $bgcolor;
+      border-color: $color;
+      color: $color;
+      span {
+        color: $color;
+
+      }
+      &:visited {
+        color: $color;
+      }
+      &:hover {
+        background: $color;
+        border-color: $bgcolor;
+        color: $bgcolor;
+        span {
+          @include transition(none);
+          color: $bgcolor !important;
+        }
+      }
+}
+
+@mixin ff-bg-color($bg-color) {
+  transition: background-color 3s ease 0s, transform 0.3s ease 0s;
+  background-color: $bg-color !important; 
+}
+
+
+@mixin cover-background($img-uri, $background-top:"center", $background-left:"center", $background-attachment:"fixed") {
+  background: url($img-uri) no-repeat unquote($background-top) unquote($background-left) unquote($background-attachment); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+}
+
+
+// Different than @media (min-width: $on-laptop) {
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+/* Usage
+ * p {
+ *     @include font-size(14px)
+ *   }
+*/
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// Usage
+
+// @include keyframes(slide-down) {
+//   0% { opacity: 1; }
+//   90% { opacity: 0; }
+// }
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+// .element {
+//   width: 100px;
+//   height: 100px;
+//   background: black;
+//   @include animation('slide-down 5s 3');
+// }
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+// Usage
+
+// a {
+//   color: gray;
+//   @include transition(color .3s ease);
+//   &:hover {
+//     color: black;
+//   }
+// }
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+// Usage
+//   @include transformation(rotate(-45deg));
+@mixin transformation($args) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+// Usage
+
+// .logo {
+//   @include fctxfxnsLogoTransp(#fff);
+// }
+
+@mixin fctxfxnsLogoTransp($color) {
+    #fctsfxns-logo-sq-wrapper {
+        #fctsfxns-sq-logo-bg {
+            fill: transparent; 
+        }
+        .fctsfxns-sq-line {
+            fill: $color; 
+        }
+        .fctsfxns-sq-logo {
+            fill: $color; 
+        }
+    }   
+    #fctsfxns-logo-wrapper {
+        #fctsfxns-logo {
+            .fctsfxns-logo-letter {
+                fill: $color; 
+            }
+        }
+    }
+}
+// .container-with-floated-children {
+//   @extend %clearfix;
+// }
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+
+// stretch element height to specified top and bottom position
+// @see: http://compass-style.org/examples/compass/layout/stretching/
+// @see: https://github.com/Compass/compass/blob/stable/core/stylesheets/compass/layout/_stretching.scss
+@mixin stretch-y($offset-top:0, $offset-bottom:0) {
+  @include stretch($offset-top, false, $offset-bottom, false);
+}
+
+
+// stretch element width to specified left and right position
+
+@mixin stretch-x($offset-left:0, $offset-right:0) {
+  @include stretch(false, $offset-right, false, $offset-left);
+}
+
+
+// shorthand to stretch element height and width
+
+@mixin stretch($offset-top:0, $offset-right:0, $offset-bottom:0, $offset-left:0) {
+  position: absolute;
+  @if $offset-top { top: $offset-top; }
+  @if $offset-bottom { bottom: $offset-bottom; }
+  @if $offset-left { left: $offset-left; }
+  @if $offset-right { right: $offset-right; }
+}
+
+
+// Based on a [blog post by Ryan Fait](http://ryanfait.com/resources/footer-stick-to-bottom-of-page/).
+//
+// Must be mixed into the top level of your stylesheet.
+//
+// Footer element must be outside of root wrapper element.
+//
+// Footer must be a fixed height.
+// @see: http://compass-style.org/reference/compass/layout/sticky_footer/
+// @see: https://github.com/Compass/compass/blob/stable/core/stylesheets/compass/layout/_sticky-footer.scss
+@mixin sticky-footer($footer-height, $root-selector: unquote("#root"), $root-footer-selector: unquote("#root_footer"), $footer-selector: unquote("#footer")) {
+  html, body {
+    height: 100%; }
+  #{$root-selector} {
+    clear: both;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -$footer-height;
+    #{$root-footer-selector} {
+      height: $footer-height; } }
+  #{$footer-selector} {
+    clear: both;
+    position: relative;
+    height: $footer-height; } }

@@ -41,23 +41,13 @@
             <meta property="twitter:image" content="{{ page.featured_image  | prepend: site.baseurl | prepend: site.url }}" />
         {% endif %}
     {% endif %}
-
-    <!-- Les styles from jekyll :: sass -->
-    {% comment %}
-    {% stylesheet default %}
-    {% endcomment %}
-
+   
     <style type="text/css">
         {% capture include_to_scssify %}
           {% include default.scss %}
         {% endcapture %}
         {{ include_to_scssify | scssify }}
     </style>
-
-    <!-- Our custom styles with less using less via grunt-node -->
-    <!-- <link rel="stylesheet" href="{{ "/css/main.min.css" | prepend: site.baseurl }}"> -->
-
-
 
 </head>
 <body class="{{ post.title | downcase | replace:' ','-' | replace:',','' | strip_html }}{% if page.category %} category-{{ page.category }}{% endif %}{% if page.layout_class %} {{ page.layout_class }}{% endif %} {{ work.title | downcase | replace:' ','-' | replace:',','' | strip_html }}">

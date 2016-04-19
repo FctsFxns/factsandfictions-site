@@ -1,0 +1,157 @@
+/*
+ * -- Inversed styles --
+ * These are the classes for the inversed styles  */
+
+/** _base.scss **/
+body.pure-inverse,
+body.pure-inverse-secondary {  
+    background-color: $ff-primary;
+    color: $ff-white;
+    h1, h2, h3, h4, h5, p, address, label {
+      color: #ffffff;
+    }
+    .pure-g [class *= "pure-u"] {
+    	color: $ff-white;
+    }
+
+  	a {
+  	    color: $ff-light;
+  	    &:visited {
+  	        color: darken($ff-light, 15%);
+  	    }
+  	    &:hover {
+  	        color: lighten($ff-light, 15%);
+  	    }
+  	}
+
+}
+body.pure-inverse-secondary {
+  background-color: $ff-secondary;
+
+}
+
+
+/** _navigation.scss **/
+body.pure-inverse,
+body.pure-inverse-secondary {   
+    nav.pure-menu { 
+        background-color: $ff-primary;
+        color: $ff-primary;
+        background-color: transparent;
+
+        @include pure-navigation-opacity(0.9, $ff-primary);
+
+    }
+    a#pure-menu-toggle {
+
+      .patty {
+          background-color: $ff-white;
+          &:before,
+          &:after {
+             background: $ff-white;
+          }
+      }
+    }
+
+    .pure-menu-heading {
+        #fctsfxns-logo-wrapper {
+            #fctsfxns-logo {
+                .fctsfxns-logo-letter {
+                    fill: $ff-white; 
+                }
+            }
+        }
+    }
+    .pure-menu-list {
+        .pure-menu-item {
+            a {
+               font-weight: 300;
+               color: $ff-white; 
+               &:visited {
+                   color: $ff-white; 
+               }
+               &:hover,
+               &:focus {
+                  color: #ffffff; 
+                  text-decoration: none;
+               }
+            }              
+        }
+    }
+}
+body.pure-inverse-secondary {
+    nav.pure-menu { 
+        background-color: $ff-secondary;
+        color: $ff-secondary;
+        @include pure-navigation-opacity(0.9, $ff-secondary);
+    }
+}
+
+
+/** _jekyll.scss **/
+body.pure-inverse {
+  article.page {
+      .page-header-wrapper {
+          &.page-header-with-media {
+              @extend %ff-text-color-primary;
+          }
+      }
+      .page-header {
+          @include ff-bg-color($ff-dark); 
+          @extend %ff-text-color-white;
+
+          &.page-header-with-video {
+          }
+
+          &.page-header-with-image {
+              @include ff-bg-color(transparent); 
+              @extend %ff-text-color-white;
+          }
+
+      }
+      .page-content {
+          @extend %ff-text-color-white;
+      }
+  }
+}
+
+body.pure-inverse-secondary {
+  article.page {
+      .page-header-wrapper {
+          &.page-header-with-media {
+              @extend %ff-text-color-white;
+          }
+      }
+      .page-header {
+
+          &.page-header-with-video {
+          }
+
+          &.page-header-with-image {
+              @include ff-bg-color(transparent); 
+              @extend %ff-text-color-white;
+          }
+
+      }
+      .page-content {
+          @extend %ff-text-color-white;
+      }
+  }
+}
+
+
+
+/** _footer.scss **/
+body.pure-inverse,
+body.pure-inverse-secondary {
+  footer {
+    &.footer {
+      background-color: transparent;
+      // Color
+      // @include stretch-x;
+      div {
+        background-color: transparent !important; 
+      }
+    }
+  }
+}

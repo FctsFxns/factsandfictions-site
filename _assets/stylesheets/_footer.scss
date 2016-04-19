@@ -1,0 +1,31 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html {
+  // position: relative;
+  // min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  // margin-bottom: $footer-height;
+}
+
+section.main {
+
+}
+
+@include sticky-footer($footer-height, "section.main", "#main-content", "footer.footer");
+
+footer {
+    background-color: $ff-white;
+    &.footer {
+      // Color
+      background-color: $ff-white;
+
+      small {
+          font-size: $small-font-size * 0.75;
+      }
+    }
+}
+
