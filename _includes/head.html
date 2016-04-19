@@ -43,30 +43,21 @@
     {% endif %}
 
     <!-- Les styles from jekyll :: sass -->
+    {% comment %}
     {% stylesheet default %}
+    {% endcomment %}
+
+    <style type="text/css">
+        {% capture include_to_scssify %}
+          {% include default.scss %}
+        {% endcapture %}
+        {{ include_to_scssify | scssify }}
+    </style>
 
     <!-- Our custom styles with less using less via grunt-node -->
     <!-- <link rel="stylesheet" href="{{ "/css/main.min.css" | prepend: site.baseurl }}"> -->
 
-    <!-- Les scripts from third parties  -->
-    {% javascript vendor %}
-    <!-- Les scripts for my app -->
-    {% javascript application %}
 
-    <!-- Only in development mode -->
-    {% if site.env == 'development' %}
-      <script src="//localhost:35729/livereload.js"></script>
-    {% endif %}
-
-    <!-- Les google analytics @todo -->
-    <script>
-          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-          e.src='//www.google-analytics.com/analytics.js';
-          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-          ga('create','{{ site.ga_analytics }}', 'auto');ga('send','pageview');
-    </script>
 
 </head>
 <body class="{{ post.title | downcase | replace:' ','-' | replace:',','' | strip_html }}{% if page.category %} category-{{ page.category }}{% endif %}{% if page.layout_class %} {{ page.layout_class }}{% endif %} {{ work.title | downcase | replace:' ','-' | replace:',','' | strip_html }}">
