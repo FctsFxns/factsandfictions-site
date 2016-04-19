@@ -27,6 +27,7 @@ gems:
 
 # Custom var
 ga_analytics: UA-67284431-1
+ga_site:      www.factsandfictions.net
 
 # Dependencies
 markdown:         kramdown
@@ -85,6 +86,7 @@ include:
   -  'humans.txt' 
   -  'robots.txt'
   -  'favicon.ico'
+  -  'analytics.js'
 
 # keep_files:     [".git", ".svn"]
 markdown_ext:     'markdown,mkdown,mkdn,mkd,md'
