@@ -1,23 +1,42 @@
 # Site settings
 title:            'facts & fictions'
-slogan:           > # this means to ignore newlines until next key
-  Let's plan, build & grow your <b>digital strategy</b>
-description:      > #  <b>facts</b> & <b>fictions</b> is
-  We are  
-  a <b>consulting</b> & <b>development</b> studio 
-  helping organizations<b> prosper in the information age</b>.
-motto:           > # this means to ignore newlines until next key
-  Analytical  & emotional, creative & effective, 
-  results & make life better.
+
+tagline:           > # …
+  Diseñamos, construimos y desarrollamos tu estrategia digital
+
+description:      > # No dejar espacios
+  Somos un estudio-consultoría de desarrollo 
+  enfocados en el crecimiento de organizaciones 
+  en la era digital.
+
+slogan:           > # …
+  Analítica & emoción, creatividad & efectividad, 
+  resultados & bienestar social.
+
+# Call to Action
+call_title:           > # …
+  **Incrementa la repercusión de tus campañas y transforma los 
+  riesgos** en oportunidades con nuestro equipo 
+  de profesionales especializados.
+
+call_intro:           > # …
+  facts & fictions usa un enfoque humano para 
+  crear experiencias digitales, mezclando la última tecnología 
+  en la intersección con los límites de la ciencia, el arte y el diseño.
+
+call_link:             > # …
+  Contacta con nosotros
+
+call_url:              > # …
+  /contact
+
 
 # Contact
 email:            true@factsandfictions.net
 twitter_username: fctsfxns
 github_username:  fctsfxns
 
-
-
-footer_text:      '2016 © All Rights Reserved'
+footer_text:      '2016 © Todos los derechos reservados'
 
 # Admin Settings
 admin_name:       'Daniel Canet'

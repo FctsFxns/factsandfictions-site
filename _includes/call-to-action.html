@@ -1,0 +1,16 @@
+<section class="highlight">
+    {% if site.data.global.call_title != '' %}
+        <header>
+            {{ site.data.global.call_title | markdownify }}
+        </header>
+    {% endif %}  
+
+    {{ site.data.global.call_intro | markdownify }}
+
+    {% if site.data.global.call_url != '' %}
+        <a href="{{ site.data.global.call_url }}" class="button">
+            {{ site.data.global.call_link }}
+        </a>
+    {% endif %}  
+</section>        
+

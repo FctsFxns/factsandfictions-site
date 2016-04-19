@@ -3,9 +3,12 @@ layout: default
 layout_class: page-home
 ---
 <article class="container">
+<h1>{{ site.env }} - pepe</h1>
+<hr>
+
   <h1>{{ site.data.global.title }}</h1>
-  <h2>{{ site.data.global.slogan }}</h2>
+  <h2>{{ site.data.global.slogan | markdownify }}</h2>
   <p>            
-  	{{ site.data.global.description }}
+  	{{ site.data.global.description | markdownify }}
 	</p>
 </article>
