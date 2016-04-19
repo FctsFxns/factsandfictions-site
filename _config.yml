@@ -36,6 +36,9 @@ highlighter:      rouge
 permalink:        pretty
 
 # Assets
+sass:
+  sass_dir: _assets/stylesheets
+
 assets:
   compress:
     css: true
