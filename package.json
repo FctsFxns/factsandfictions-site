@@ -1,0 +1,19 @@
+{
+  "name": "factsandfictions-web",
+  "version": "0.0.1",
+  "description": "Website de facts & fictions",
+  "author": "Daniel Canet <daniel@factsandfictions.net>",
+  "homepage": "http://www.factsandfictions.net/",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-jekyll": "*",
+    "load-grunt-tasks": "*"
+  }
+}
