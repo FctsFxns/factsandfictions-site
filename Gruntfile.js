@@ -126,22 +126,21 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-clean');
 
-  // grunt.registerTask('default', ['less', 'concat:css', 'cssmin:css', 'jekyll']);
-  // grunt.registerTask('css', ['less', 'concat:css', 'cssmin:css']);
-
   // Only compile the custom less->css for Christina's site theme
   // Using grunt 'grunt-contrib-less' + 'grunt-contrib-cssmin'
   // resulting on -> css/main.min.css 
-  grunt.registerTask('css', ['less', 'cssmin:css']);
+  // grunt.registerTask('css', ['less', 'cssmin:css']);
   
   // Build the full site
   // Less -> sass + js -> jekyll -> _dist
-  grunt.registerTask('build', ['clean','less','cssmin:css','jekyll:dist']);
+  // grunt.registerTask('build', ['clean','less','cssmin:css','jekyll:dist']);
+  grunt.registerTask('build', ['clean','jekyll:dist']);
 
   // Watch for content creation serving from jekyll
   // "_assets" asset pipeline will work: js + sass
   // "_less"   asset pipeline will NOT work: less
-  grunt.registerTask('content', ['clean','less','cssmin:css','jekyll:devel']);
+  // grunt.registerTask('content', ['clean','less','cssmin:css','jekyll:devel']);
+  grunt.registerTask('content', ['clean','jekyll:devel']);
 
   // Server option: tails connect + watch
   // "_assets" + "_less" asset pipeline will both work: 

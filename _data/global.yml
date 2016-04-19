@@ -1,0 +1,24 @@
+# Site settings
+title:            'facts & fictions'
+slogan:           > # this means to ignore newlines until next key
+  Let's plan, build & grow your <b>digital strategy</b>
+description:      > #  <b>facts</b> & <b>fictions</b> is
+  We are  
+  a <b>consulting</b> & <b>development</b> studio 
+  helping organizations<b> prosper in the information age</b>.
+motto:           > # this means to ignore newlines until next key
+  Analytical  & emotional, creative & effective, 
+  results & make life better.
+
+# Contact
+email:            true@factsandfictions.net
+twitter_username: fctsfxns
+github_username:  fctsfxns
+
+
+
+footer_text:      '2016 © All Rights Reserved'
+
+# Admin Settings
+admin_name:       'Daniel Canet'
+admin_email:      'true@factsandfictions.net'

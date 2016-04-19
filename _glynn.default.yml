@@ -1,0 +1,14 @@
+# Glynn setup
+ftp_host: 'XXXXXXXXXX'
+ftp_dir: '/public_html'
+
+# Not using credentials since they are set as environment variables
+# see ./bin/deploy
+# ftp_username: 'XXX' 
+# ftp_password: 'XXX' 
+
+# Configuration settings for Travis on Hetzner Dedicated Server
+ftp_passive: true
+ftp_port: 21                  # default 21
+ftp_secure: false             # default false
+

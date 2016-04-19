@@ -38,7 +38,7 @@ permalink:        pretty
 # Assets
 assets:
   compress:
-    css: less
+    css: true
     js: true
   digest: true
   prefix: "/assets"

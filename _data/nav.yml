@@ -1,0 +1,4 @@
+main:
+    - { url: '/services', text: 'Services', title: 'What we do' }
+    - { url: '/about', text: 'About us', title: 'Who we are' }
+    - { url: '/contact', text: 'Contact', title: 'Work with us' }

@@ -1,0 +1,23 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Daniel Canet   -- Digital Production -- @dcanetma
+    Marc martí     -- Creative texts     -- @marcmarti
+    Diego Paonessa -- Web design         --  
+
+# THANKS to
+
+    Life, family and friends.
+
+# TECHNOLOGY COLOPHON 
+    HTML5, CSS3, 
+    Less, Sass,
+    jQuery, Respond,
+    "Bootstrap",
+    "Grunt",
+    "Bower",
+    "Glynn",
+    "Jekyll", 
+    Travis Jekyll by Felix Rieseberg
