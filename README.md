@@ -47,6 +47,10 @@ Empleamos variables de desarrollo para aprovechar el uso de livereload, por ejem
 
 El despliegue se realiza de manera automática mediante travis.
 
-Solo se realiza el despliegue si se valida correctamente el sitio web.
+**Notas:**
 
-El despliegue se realiza mediante 'glynn' tan solo para la rama 'deploy'.
+- Solo se realiza el despliegue si se valida correctamente el sitio web con 'html_proofer'
+
+- El despliegue se realiza mediante 'glynn' tan solo para la rama 'deploy'.
+
+- Debe indicar las credenciales FTP del servidor como variables de entorno en Travis.
