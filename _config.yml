@@ -16,7 +16,7 @@ destination:      ./_site
 host:             127.0.0.1
 port:             9009
 encoding:         UTF-8
-url:              'http://www.factsandfictions.net/'
+url:              'http://www.factsandfictions.net'
 baseurl:          "" # does not include hostname
 #detach:          false
 

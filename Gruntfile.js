@@ -1,34 +1,6 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-
-    less: {
-      development: {
-        options: {
-          compress: true,
-          yuicompress: true,
-          optimization: 2
-        },
-        files: {
-          // "_assets/css/main.css": "_less/main.less"
-          "css/main.css": "_less/main.less"
-        }
-      }
-    },        
-    concat: {
-      css: {
-        src: [
-        '_css/*'
-        ],
-        dest: 'css/main.css'
-      }
-    },
-    cssmin: {
-      css: {
-        src:  'css/main.css',
-        dest: 'css/main.min.css'
-      }
-    },
     jekyll: {
       options: {                          
         src: '.',
@@ -71,13 +43,6 @@ module.exports = function(grunt) {
       options: {
         livereload: true,
       },
-      css: {
-        files: [
-          '_less/*.less',
-          '_less/partials/*.less'
-          ],
-        tasks: ['less', 'cssmin:css'],
-      },
       html: {
         files: [
           '.htaccess', 
@@ -96,7 +61,6 @@ module.exports = function(grunt) {
           '_includes/components/*', 
           '_includes/*', 
           '_posts/*', 
-          '_works/*', 
           '_pages/*',
           'media/*',
           'media/images/*',
@@ -126,25 +90,17 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-clean');
 
-  // Only compile the custom less->css for Christina's site theme
-  // Using grunt 'grunt-contrib-less' + 'grunt-contrib-cssmin'
-  // resulting on -> css/main.min.css 
-  // grunt.registerTask('css', ['less', 'cssmin:css']);
   
   // Build the full site
   // Less -> sass + js -> jekyll -> _dist
-  // grunt.registerTask('build', ['clean','less','cssmin:css','jekyll:dist']);
   grunt.registerTask('build', ['clean','jekyll:dist']);
 
   // Watch for content creation serving from jekyll
   // "_assets" asset pipeline will work: js + sass
-  // "_less"   asset pipeline will NOT work: less
-  // grunt.registerTask('content', ['clean','less','cssmin:css','jekyll:devel']);
   grunt.registerTask('content', ['clean','jekyll:devel']);
 
   // Server option: tails connect + watch
-  // "_assets" + "_less" asset pipeline will both work: 
-  // [js + sass] + [less]
+  // "_assets" asset pipeline will both work: 
   grunt.registerTask('theming', ['build','connect', 'watch']);
 
   // Watch for content and forget about the rest

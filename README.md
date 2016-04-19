@@ -1,5 +1,8 @@
 # Website de facts & fictions 
 
+[![Build Status](https://travis-ci.org/FctsFxns/factsandfictions-site.png)](https://travis-ci.org/FctsFxns/factsandfictions-site)
+
+
 	url: http://www.factandfictions.net/2016
 
 ## Información para desarrolladores
@@ -17,9 +20,16 @@
   - [jekyll-minimagick](https://github.com/zroger/jekyll-minimagick)
 - [ImageMagick®](http://www.imagemagick.org/)
 - [Bower](http://bower.io/)
-- [Grunt](http://gruntjs.com/)
 
 ### Desarrollo
+
+- [Grunt](http://gruntjs.com/)
+
+Antes de nada es necesario instalar grunt
+
+> npm init
+
+Los comandosde theming son los siguientes:
 
 > grunt --help
 > 
@@ -32,3 +42,11 @@
 Empleamos variables de desarrollo para aprovechar el uso de livereload, por ejemplo.
 
 > export JEKYLL_ENV=development
+
+### Despliegue
+
+El despliegue se realiza de manera automática mediante travis.
+
+Solo se realiza el despliegue si se valida correctamente el sitio web.
+
+El despliegue se realiza mediante 'glynn' tan solo para la rama 'deploy'.
