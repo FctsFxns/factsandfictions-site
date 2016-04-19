@@ -1,0 +1,116 @@
+# facts and fictions site, jekyll configuration file
+
+# Important info for editors!
+
+# - Settings related to content are stored in /_data/global.yml
+# - Main navigation is stored in /_data/nav.yml
+
+# Where things are
+plugins_dir:      ./_plugins
+layouts_dir:      ./_layouts
+data_dir:         ./_data
+source:           .
+destination:      ./_site
+
+# Server
+host:             127.0.0.1
+port:             9009
+encoding:         UTF-8
+url:              'http://www.factsandfictions.net/'
+baseurl:          "" # does not include hostname
+#detach:          false
+
+# Gems var
+gems:
+  - jekyll-paginate
+  - jekyll-assets
+
+# Custom var
+ga_analytics: UA-67284431-1
+
+# Dependencies
+markdown:         kramdown
+highlighter:      rouge
+
+# Permalinks
+permalink:        pretty
+
+# Assets
+assets:
+  compress:
+    css: less
+    js: true
+  digest: true
+  prefix: "/assets"
+  sources:
+    - _assets/bower
+    - _assets/js
+    - _assets/stylesheets
+
+
+# Handling Reading
+# safe:             false
+
+# Outputting
+permalink:       /:title.html
+paginate_path:   /page:num
+#paginate:        3
+timezone:        'ES'
+future:          true
+
+# include:        [".htaccess,images"]
+exclude:          [
+  'node_modules'
+  , 'bin'
+  , '_glynn.yml'
+  , 'Gemfile'
+  , 'Gemfile.lock'
+  , 'Gruntfile.js'
+  , 'bower.json'
+  , 'node_modules'  
+  , 'README.md'  
+  , '_assets/vendor'           # necessary for travis integration
+  ]
+
+include:          
+  -  '.htaccess'
+  -  '_pages'
+  -  'feed.xml' 
+  -  'atom.xml' 
+  -  'crossdomain.xml' 
+  -  'sitemap.xml' 
+  -  'humans.txt' 
+  -  'robots.txt'
+  -  'favicon.ico'
+
+# keep_files:     [".git", ".svn"]
+markdown_ext:     'markdown,mkdown,mkdn,mkd,md'
+
+# Outputting
+permalink:       /:title.html
+#paginate_path:   /page:num
+#paginate:        3
+timezone:        'ES'
+
+# Compress html
+# @see: http://jch.penibelst.de/
+compress_html:
+  clippings: [div, p, ul, td, h1, h2, h3, h4, h5]
+  comments: ["<!-- ", " -->"]
+  endings: []
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []
+
+# Custom vars
+current_version:  1.0.0
+repo:             https://bitbucket.org/danielcanet/factsandfictions-web
+
+#minimagik
+mini_magick:
+    thumbnail:
+        source: media/images
+        destination: media/images/thumbnail
+        resize: "600x"

@@ -5,7 +5,7 @@ gem "sass"
 gem 'jekyll-paginate'
 
 # To compile sass + .js files while don't use grunt or similar
-# gem "jekyll-assets"
+gem "jekyll-assets"
 
 # Allow validation before deployment with travis
 gem "html-proofer"

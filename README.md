@@ -13,9 +13,11 @@
 
 #### Dependencias
 
-- Ruby y Bundle
-- Bower
-- Grunt
+- Ruby & [Bundler](http://bundler.io/)
+  - [jekyll-minimagick](https://github.com/zroger/jekyll-minimagick)
+- [ImageMagick®](http://www.imagemagick.org/)
+- [Bower](http://bower.io/)
+- [Grunt](http://gruntjs.com/)
 
 ### Desarrollo
 
