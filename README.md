@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/FctsFxns/factsandfictions-site.png)](https://travis-ci.org/FctsFxns/factsandfictions-site)
 
 
-	url: http://www.factandfictions.net/2016
+	url: http://www.factsandfictions.net/2016/
 
 ## Información para desarrolladores
 
