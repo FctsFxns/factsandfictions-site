@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-<div class="post">
+<article>
+	{% if page.title %}
+	  <header class="post-header">
+	    <h1 class="post-title">{{ page.title }}</h1>
+	  </header>
+  {% endif %}
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+  {{ content }}
 
-  <article class="post-content">
-    {{ content }}
-  </article>
-
-</div>
+</article>
+{% include call-to-action.html %}
