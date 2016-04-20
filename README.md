@@ -3,7 +3,20 @@
 [![Build Status](https://travis-ci.org/FctsFxns/factsandfictions-site.png)](https://travis-ci.org/FctsFxns/factsandfictions-site)
 
 
-	url: http://www.factandfictions.net/2016
+	url: http://www.factsandfictions.net/2016/
+
+
+## Información para editores
+
+El contenido de la web se gestiona a través de este repositorio de código.
+
+### Configuración
+
+En la carpeta '_data' encontrarás los ficheros de configuración en
+formato YAML que te van a permitir gestionar los valores de:
+
+- **global.yml**: textos comunes y valores del sitio web
+- **nav.yml**: la navegación principal del sitio web
 
 ## Información para desarrolladores
 

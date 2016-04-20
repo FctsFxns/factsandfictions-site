@@ -12,6 +12,9 @@ _site
 *.asset-cache
 *.sass-cache
 
+# Custom
+sandbox
+
 # Travis
 
 # Numerous always-ignore extensions

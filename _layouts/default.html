@@ -2,7 +2,14 @@
 layout: compress
 ---
 {% include head.html %}
- 
-  {{ content }}
-
+  <header class="header">
+	  {% include navigation.html %} 
+  </header>          
+  <section id="main-content" class="main">
+    <div class="content">
+      {{ content }}
+    </div>
+		{% include call-to-action.html %} 
+  </section>
+  {% include footer.html %} 
 {% include closure.html %}

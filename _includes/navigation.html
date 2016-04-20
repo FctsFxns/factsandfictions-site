@@ -1,0 +1,15 @@
+<nav>
+    <a href="{{ '/' | prepend: site.data.global.url }}">
+        <span>{{ site.data.global.title }}</span>
+    </a>
+    <ul>
+        {% for item in site.data.nav.main %}
+            <li >
+                <a href="{{ item.url | prepend: site.data.global.url }}" title="{{ item.title }}">
+                    {{ item.text }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>  
+</nav>
+

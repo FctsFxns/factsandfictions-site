@@ -1,4 +1,17 @@
+
 @charset "utf-8";
 
-@import "syntax-highlighting";
+// Brand variables
+// Colors
+$ff-primary:   #593F7F;
+$ff-secondary: #0274d8;
+$ff-white:     #F9F9F9;
+$ff-black:     #000000;
+$ff-light:     #EC008C;
+$ff-dark:      #333333;
+
+// Import partials from `sass_dir` (defaults to `_assets/stylesheets`)
+@import
+    'syntax-highlighting'
+;
 

@@ -1,0 +1,21 @@
+<article class="highlight">
+    {% if site.data.global.call_title != '' %}
+        <header>
+            {{ site.data.global.call_title | markdownify }}
+        </header>
+    {% endif %}  
+
+    <p>
+        {{ site.data.global.call_intro | markdownify }}
+    </p>
+
+
+    {% if site.data.global.call_url != '' %}
+        <p>
+            <a href="{{ site.data.global.call_url }}" class="button">
+                {{ site.data.global.call_link }}
+            </a>            
+        </p>
+    {% endif %}  
+</article>        
+
