@@ -29,8 +29,7 @@ call_intro:           > # …
 call_link:             > # …
   Contacta con nosotros
 
-call_url:              > # …
-  /contact
+call_url:              ''
 
 
 # Contact
