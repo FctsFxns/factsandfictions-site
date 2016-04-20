@@ -1,32 +1,15 @@
-    <nav class="pure-menu pure-menu-horizontal pure-menu-fixed" role="navigation">
-        <div class="bar">
-            <a class="pure-menu-heading" href="{{ '/' | prepend: site.data.global.url }}">
-                <span>{{ site.data.global.title }}</span>
-                {% include logo.html logoclass='logo logo-primary-inverse svg-responsive' %}
-                
-            </a>
-            <ul class="pure-menu-list">
-                <!-- TODO: add .pure-menu-selected -->
-                {% for item in site.data.nav.main %}
-                    <li class="pure-menu-item">
-                      <a href="{{ item.url | prepend: site.data.global.url }}" title="{{ item.title }}" class="pure-menu-link track">{{ item.text }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
+<nav>
+    <a href="{{ '/' | prepend: site.data.global.url }}">
+        <span>{{ site.data.global.title }}</span>
+    </a>
+    <ul>
+        {% for item in site.data.nav.main %}
+            <li >
+                <a href="{{ item.url | prepend: site.data.global.url }}" title="{{ item.title }}">
+                    {{ item.text }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>  
+</nav>
 
-            <a href="#" id="pure-menu-toggle">
-                <div class="patty"></div>
-            </a>              
-        </div>
-
-        <div class="nav-background">
-            <ul>
-            {% for item in site.data.nav.main %}
-                <li><a href="{{ item.url | prepend: site.data.global.url }}" title="{{ item.title }}">{{ item.text }}<br/> <span>{{ item.title }}.</span></a></li>
-            {% endfor %}
-            </ul>
-        </div>
-        
-
-
-    </nav>

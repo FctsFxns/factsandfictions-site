@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 # Dependencies
 gem "jekyll"
-gem 'compass'
 gem "sass"
 gem 'jekyll-paginate'
 
